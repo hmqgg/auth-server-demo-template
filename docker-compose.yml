@@ -12,7 +12,7 @@ services:
     networks:
       - core_service
     labels:
-      - "traefik.http.routers.auth-server-router.rule=Host(`auth.{{INTERNAL:HOST:DOMAIN}}`)"
+      - "traefik.http.routers.auth-server-router.rule=Host(`auth.{{INTERNAL:HOST_DOMAIN}}`)"
       - "traefik.http.services.auth-server-service.loadbalancer.server.port=80"
 
 networks:
